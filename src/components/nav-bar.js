@@ -33,7 +33,7 @@ export default function NavBar() {
                 {' '}
                 <Link to="/app/profile">Profile</Link>
                 {' '}
-                {isLoggedIn() ? (
+                
                     <a
                         href="/"
                         onClick={event => {
@@ -41,9 +41,15 @@ export default function NavBar() {
                             logout(() => navigate(`/app/login`))
                         }}
                     >
-                        Logout
+                        {isLoggedIn() ? (
+                            <span>Logout</span>
+                        ) : (
+                            <span>Login</span>   
+                        )}
                     </a>
-                ) : null}
+                  
+              
+                   
             </nav>
         </div>
     )
