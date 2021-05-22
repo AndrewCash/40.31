@@ -2,13 +2,21 @@ import React from 'react'
 import { Link, navigate } from 'gatsby'
 import { getUser, isLoggedIn, logout } from "../services/auth"
 
-export default function NavBar() {
+
+function greetingMessage() {
     let greetingMessage = ""
     if (isLoggedIn()) {
         greetingMessage = `Hello ${getUser().name}`
     } else {
         greetingMessage = "You are not logged in"
     }
+
+    return greetingMessage
+}
+
+
+export default function NavBar() {
+    
     return (
         <div
             style={{
@@ -18,7 +26,7 @@ export default function NavBar() {
                 borderBottom: "1px solid #d1c1e0",
             }}
         >
-            <span>{greetingMessage}</span>
+            <span>{greetingMessage()}</span>
             
             <nav>
                 <Link to="/">Home</Link>
