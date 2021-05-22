@@ -4,6 +4,8 @@ import { getUser, isLoggedIn } from "../services/auth"
 
 import Layout from "../components/layout"
 
+import Yellow from "../components/yellow"
+
 export default function Home() {
   return (
     <Layout>
@@ -20,7 +22,13 @@ export default function Home() {
             restricted content.
           </>
         )}
+      
+            
+      {/* <img  src={YellowShirt} alt="A rack with several shirts. The shirt at the front of the rack is yellow."/> */}
+      <Yellow />
+      
       </p>
+
     </Layout>
   )
 }
