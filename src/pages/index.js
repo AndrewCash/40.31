@@ -7,12 +7,20 @@ import Layout from "../components/layout"
 export default function Home() {
   return (
     <Layout>
-      <h1>Hello {isLoggedIn() ? getUser().name : "world"}!</h1>
+      
       <p>
         {isLoggedIn() ? (
           <>
-            You are logged in, so check your{" "} 
-            <Link to="/app/profile">profile</Link>
+
+            <h1>Hello {isLoggedIn() ? getUser().name : "world"}!</h1>
+            {/* You are logged in, so check your{" "} 
+            <Link to="/app/profile">profile</Link> */}
+        
+        
+        
+        
+        
+        
           </>
         ) : (
           <>

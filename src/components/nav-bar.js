@@ -34,19 +34,19 @@ export default function NavBar() {
                 <Link to="/app/profile">Profile</Link>
                 {' '}
                 
-                    <a
-                        href="/"
-                        onClick={event => {
-                            event.preventDefault()
-                            logout(() => navigate(`/app/login`))
-                        }}
-                    >
-                        {isLoggedIn() ? (
-                            <span>Logout</span>
-                        ) : (
-                            <span>Login</span>   
-                        )}
-                    </a>
+                <a
+                    href="/"
+                    onClick={event => {
+                        event.preventDefault()
+                        logout(() => navigate(`/app/login`))
+                    }}
+                >
+                    {isLoggedIn() ? (
+                        <span>Logout</span>
+                    ) : (
+                        <span>Login</span>   
+                    )}
+                </a>
                   
               
                    
