@@ -8,7 +8,7 @@ function greetingMessage() {
     if (isLoggedIn()) {
         greetingMessage = `Hello ${getUser().name}`
     } else {
-        greetingMessage = "You are not logged in"
+        // greetingMessage = "You are not logged in"
     }
 
     return greetingMessage
