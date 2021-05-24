@@ -5,11 +5,14 @@ import { getUser, isLoggedIn, logout } from "../services/auth"
 
 function greetingMessage() {
     let greetingMessage = ""
-    if (isLoggedIn()) {
-        greetingMessage = `Hello ${getUser().name}`
-    } else {
-        // greetingMessage = "You are not logged in"
-    }
+    
+    // if (isLoggedIn()) {
+    //     greetingMessage = `Hello ${getUser().name}`
+    // } else {
+    //     // greetingMessage = "You are not logged in"
+    // }
+
+    greetingMessage = "40.31"
 
     return greetingMessage
 }
@@ -24,6 +27,7 @@ export default function NavBar() {
                 flex: "1",
                 justifyContent: "space-between",
                 borderBottom: "1px solid #d1c1e0",
+                fontFamily: "-apple-system, Roboto, mono, serif",
             }}
         >
             <span>{greetingMessage()}</span>
