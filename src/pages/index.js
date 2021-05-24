@@ -22,8 +22,8 @@ export default function Home() {
           <>
             { /* Logged out */ }
 
-            You should <Link to="/app/login">log in</Link> to see
-            restricted content.
+            {/* You should <Link to="/app/login">log in</Link> to see
+            restricted content. */}
           </>
         )}
       
