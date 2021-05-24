@@ -1,6 +1,5 @@
 import React from 'react'
 import { StaticImage } from "gatsby-plugin-image"
-import YellowShirt from "../images/yellow-shirt.jpg"
 
 
 export default function Yellow() {

@@ -13,11 +13,15 @@ export default function Home() {
       <p>
         {isLoggedIn() ? (
           <>
+            { /* Logged in */ }
+
             You are logged in, so check your{" "} 
             <Link to="/app/profile">profile</Link>
           </>
         ) : (
           <>
+            { /* Logged out */ }
+
             You should <Link to="/app/login">log in</Link> to see
             restricted content.
           </>
