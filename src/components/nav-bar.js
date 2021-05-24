@@ -35,25 +35,28 @@ export default function NavBar() {
             <nav>
                 <Link to="/">Home</Link>
                 {' '}
-                <Link to="/app/profile">Profile</Link>
-                {' '}
                 
-                    <a
-                        href="/"
-                        onClick={event => {
-                            event.preventDefault()
-                            logout(() => navigate(`/app/login`))
-                        }}
-                    >
-                        {isLoggedIn() ? (
-                            <span>Logout</span>
-                        ) : (
-                            <span>Login</span>   
-                        )}
-                    </a>
-                  
-              
-                   
+                {isLoggedIn() ? (
+                <>
+                    <Link to="/app/profile">Profile</Link>
+                    {" "}
+                </>
+                ) : null}
+                
+                <a
+                    href="/"
+                    onClick={event => {
+                        event.preventDefault()
+                        logout(() => navigate(`/app/login`))
+                    }}
+                >
+                    {isLoggedIn() ? (
+                        <span>Logout</span>
+                    ) : (
+                        <span>Login</span>   
+                    )}
+                </a>
+                 
             </nav>
         </div>
     )
